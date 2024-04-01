@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys; import os; import argparse; import socket; import signal; import time
+import sys; import os; import argparse; import socket; import signal
 
 #Colours
 redColour = "\033[31m"
