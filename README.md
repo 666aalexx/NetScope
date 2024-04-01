@@ -3,7 +3,7 @@
 ```
   git clone https://github.com/666aalexx/NetScope.git
 
-  cd NetScope
+  cd NetScope/
   
   chmod +x netscope.py
   
