@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys; import os; import argparse; import socket; import signal
+import sys; import os; import argparse; import socket
 
 #Colours
 redColour = "\033[31m"
@@ -8,11 +8,6 @@ greenColour = "\033[32m"
 yellowColour = "\033[33m"
 blueColour = "\033[34m"
 resetColour = "\033[0m"
-
-def sig_handler(sig, frame):
-    sys.exit(1)
-
-signal.signal(signal.SIGINT, sig_handler)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-t", "--target", required=True)
@@ -38,5 +33,8 @@ def main():
                 pass
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(1)
 
